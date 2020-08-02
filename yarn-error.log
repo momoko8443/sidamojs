@@ -1,0 +1,64 @@
+Arguments: 
+  /Users/huibin/.nvm/versions/node/v10.2.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/huibin/.cargo/bin:/Users/huibin/.nvm/versions/node/v10.2.0/bin:/Users/huibin/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/opt/X11/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin:/Users/huibin/software/apache-maven-3.5.0/bin:/usr/local/mysql/bin:/Users/huibin/software/apache-jmeter-5.1.1/bin:/Users/huibin/Library/Android/sdk/tools:/Users/huibin/Library/Android/sdk/tools/bin:/Users/huibin/Library/Android/sdk/platform-tools:/Users/huibin/software/ngrok:/Users/huibin/software/flutter/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.2.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "profile_ui_components",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "dependencies": {
+      "@webcomponents/custom-elements": "^1.4.2",
+      "to-string-loader": "^1.1.6",
+      "ts-loader": "^8.0.1",
+      "typescript": "^3.9.7",
+      "webpack": "^4.44.0",
+      "webpack-cli": "^3.3.12"
+    },
+    "devDependencies": {
+      "@teamsupercell/typings-for-css-modules-loader": "^2.2.0",
+      "@types/node": "^14.0.27",
+      "css-loader": "^4.1.1",
+      "css-raw-loader": "^0.1.2",
+      "file-loader": "^6.0.0",
+      "raw-loader": "^4.0.1",
+      "style-loader": "^1.2.1",
+      "webpack-dev-server": "^3.11.0"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "build": "webpack --config webpack.config.js",
+      "serve": "npm run build && webpack-dev-server --host 0.0.0.0"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Found incompatible module
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at checkOne (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62444:11)
+      at Object.check (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:62463:5)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:22803:73
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13

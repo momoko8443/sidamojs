@@ -1,0 +1,11 @@
+.loginForm {
+    font-size: 18px;
+}
+
+.loginForm input {
+    color: red;
+}
+
+.loginForm button {
+    background-color: blue;
+}

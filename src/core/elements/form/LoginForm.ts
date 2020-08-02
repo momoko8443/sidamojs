@@ -1,10 +1,10 @@
 import {BaseElement} from '../BaseElement';
-import css from "!!raw-loader!../../styles/HBox.css";
-import template from  "!!raw-loader!../../templates/HBox.html";
+import css from "!!raw-loader!../../styles/LoginForm.css";
+import template from  "!!raw-loader!../../templates/LoginForm.html";
 
-export class HBox extends BaseElement{
+export class LoginForm extends BaseElement{
     constructor(){
-        super(template,['hbox'],css);
+        super(template,['loginForm'],css);
     }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用
         console.log('connectedCallback','called');
@@ -19,4 +19,4 @@ export class HBox extends BaseElement{
         console.log('attributeChangedCallback','called');
     }
 }
-customElements.define("serai-hbox",HBox);
+customElements.define("serai-login", LoginForm);

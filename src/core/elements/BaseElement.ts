@@ -3,12 +3,13 @@ export class BaseElement extends HTMLElement{
     name:string;
     nodeName2:string;
     status:string;
-    constructor(_nodeName:string,_classNames:Array<string>,_styleContent:string) {
+    constructor(template:string,_classNames:Array<string>,_styleContent:string) {
         super();
         const shadow = this.attachShadow({mode: 'open'});
-        const nodeElement:HTMLElement = document.createElement(_nodeName);
-        nodeElement.setAttribute('class',_classNames.join(' '));
-        shadow.appendChild(nodeElement);
+        const templateEle:HTMLTemplateElement = document.createElement('template');
+        templateEle.innerHTML = template;
+        shadow.appendChild(templateEle.content);
+        shadow.children[0].setAttribute('class',_classNames.join(' '));
         if(_styleContent){
             const styleLink:HTMLStyleElement = document.createElement('style');
             _styleContent = _styleContent.replace(/[\r\n]/g,"");
