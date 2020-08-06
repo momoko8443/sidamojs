@@ -1,5 +1,5 @@
 import { BaseElement } from '../BaseElement';
-export declare class HBox extends BaseElement {
+export declare class LoginForm extends BaseElement {
     constructor();
     connectedCallback(): void;
     disconnectedCallback(): void;

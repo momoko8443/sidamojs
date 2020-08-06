@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>hello world</h1>
-    <serai-vbox>
+    <!-- <serai-vbox>
         <span slot="content">aaa</span>
         <span slot="content">bbb</span>
     </serai-vbox>
@@ -20,11 +20,20 @@
             <span slot="content">ddd</span>
         </serai-vbox>
     </serai-hbox>
-    <serai-login></serai-login>
+    <serai-login></serai-login> -->
+    <serai-news id="seraiNews" title="DEMO"></serai-news>
 </body>
 <script>
+    const news_list = [{title:'this is a new title'},{title:'this is a new title 2'},{title:'this is a new title 3'}];
+    const seraiNewsDOM = document.getElementById('seraiNews')
+    seraiNewsDOM.setAttribute('source',JSON.stringify(news_list));
     const VBox = sidamo.VBox;
     new VBox();
+    const news = 
     console.log();
+    seraiNewsDOM.addEventListener('itemclick',(e)=>{
+        //console.log(e.detail);
+        alert(e.detail.title);
+    })
 </script>
 </html>

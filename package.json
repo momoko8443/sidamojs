@@ -1,10 +1,13 @@
 {
-  "name": "profile_ui_components",
+  "name": "sidamojs",
   "version": "1.0.0",
   "description": "",
-  "main": "webpack.config.js",
+  "main": "dist/sidamo",
+  "typings": "dist/sidamo",
   "dependencies": {
     "@webcomponents/custom-elements": "^1.4.2",
+    "@webcomponents/shadydom": "^1.7.4",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
     "to-string-loader": "^1.1.6",
     "ts-loader": "^8.0.1",
     "typescript": "^3.9.7",
