@@ -2,7 +2,6 @@ import {BaseElement} from '../BaseElement';
 import css from "!!raw-loader!../../styles/News.css";
 import template from  "!!raw-loader!../../templates/News.html";
 
-//const news_list:Array<Object> = [{title:'this is a new title'},{title:'this is a new title 2'},{title:'this is a new title 3'}]
 export class News extends BaseElement{
     get source(){
         return JSON.parse(this.getAttribute('source'));
@@ -34,9 +33,6 @@ export class News extends BaseElement{
     }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用
         console.log('connectedCallback','called');
-        //const child:HTMLElement = this.shadowRoot.children[0] as HTMLElement;
-        //console.log(child);
-        //this.renderList(news_list);
     }
     disconnectedCallback(){ //当 custom element从文档DOM中删除时，被调用
         console.log('disconnectedCallback','called');
