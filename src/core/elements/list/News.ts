@@ -28,7 +28,7 @@ export class News extends BaseElement{
         return ['source', 'title'];
     }
     constructor(){
-        super(template,['news'],css);
+        super(template,css);
         console.log('constructorCallback','called');
     }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用

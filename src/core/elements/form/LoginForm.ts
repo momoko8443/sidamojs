@@ -4,7 +4,7 @@ import template from  "!!raw-loader!../../templates/LoginForm.html";
 
 export class LoginForm extends BaseElement{
     constructor(){
-        super(template,['loginForm'],css);
+        super(template,css);
     }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用
         console.log('connectedCallback','called');

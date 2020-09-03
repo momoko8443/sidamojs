@@ -4,7 +4,7 @@ import template from  "!!raw-loader!../../templates/VBox.html";
 
 export class VBox extends BaseElement{
     constructor(){
-        super(template,['vbox'],css);
+        super(template,css);
     }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用
         console.log('connectedCallback','called');
