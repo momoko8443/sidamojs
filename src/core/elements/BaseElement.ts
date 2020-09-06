@@ -19,6 +19,20 @@ export class BaseElement extends HTMLElement{
             this.shadow.appendChild(styleLink);
         }
     }
+    buildAttributesSetterGetter(){
+        Object.getOwnPropertyNames(this).forEach((name)=>{
+            if(name !== 'template' && name !== 'styleContent' && name !== 'shadow'){
+                Object.defineProperty(this,name,{
+                    get: ()=>{
+                        return this.getAttribute(name);
+                    },
+                    set: (val)=>{
+                        return this.setAttribute(name, val);
+                    }
+                })
+            }
+        })
+    }
     attributeChangedCallback(name:string, oldValue:any, newValue:any){
         if((this as any)[name + 'Handler'] && typeof (this as any)[name + 'Handler'] === 'function'){
             (this as any)[name + 'Handler'].call(this,oldValue,newValue);

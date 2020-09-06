@@ -3,40 +3,19 @@ import css from "!!raw-loader!../../styles/demo/UserCard.css";
 import template from  "!!raw-loader!../../templates/demo/UserCard.html";
 
 export class UserCard extends BaseElement{
+    public image:string;
+    public name:string;
+    public email:string;
     constructor(_template:string,_style:string){
         super(_template || template,_style || css);
+        this.image = "";
+        this.name = "";
+        this.email = "";
         console.log('constructorCallback','called');
+        this.buildAttributesSetterGetter();
     }
-    get image(){
-        return JSON.parse(this.getAttribute('image'));
-    }
-    set image(val){
-        if(val){
-            this.setAttribute('image',JSON.stringify(val));
-        }else{
-            this.removeAttribute('image');
-        }
-    }
-    get name(){
-        return JSON.parse(this.getAttribute('name'));
-    }
-    set name(val){
-        if(val){
-            this.setAttribute('name',JSON.stringify(val));
-        }else{
-            this.removeAttribute('name');
-        }
-    }
-    get email(){
-        return JSON.parse(this.getAttribute('email'));
-    }
-    set email(val){
-        if(val){
-            this.setAttribute('email',JSON.stringify(val));
-        }else{
-            this.removeAttribute('email');
-        }
-    }
+    
+
 
     static get observedAttributes() {
         return ['image', 'name','email'];
@@ -56,15 +35,10 @@ export class UserCard extends BaseElement{
         this.shadowRoot.querySelector('img').setAttribute('src', newValue);   
     }
     nameHandler(oldValue:any, newValue:any){
-        if()
         (this.shadowRoot.querySelector('.container>.name') as HTMLElement).innerText = newValue;
     }
     emailHandler(oldValue:any, newValue:any){
         (this.shadowRoot.querySelector('.container>.email') as HTMLElement).innerText = newValue;
-    }
-
-    render(){
-
     }
 }
 customElements.define("user-card", UserCard);

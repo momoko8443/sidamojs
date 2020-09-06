@@ -4,4 +4,5 @@ export declare class BaseElement extends HTMLElement {
     styleContent: string;
     constructor(_template: string, _styleContent: string);
     attributeChangedCallback(name: string, oldValue: any, newValue: any): void;
+    render(): void;
 }
