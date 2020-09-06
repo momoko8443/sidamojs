@@ -24,9 +24,18 @@ export class BaseElement extends HTMLElement{
             if(name !== 'template' && name !== 'styleContent' && name !== 'shadow'){
                 Object.defineProperty(this,name,{
                     get: ()=>{
-                        return this.getAttribute(name);
+                        let result = this.getAttribute(name);
+                        try{
+                            result = JSON.parse(result);
+                            return result;
+                        }catch(e){
+                            return result;
+                        }
                     },
                     set: (val)=>{
+                        if(typeof val === 'object'){
+                            val = JSON.stringify(val);
+                        }
                         return this.setAttribute(name, val);
                     }
                 })

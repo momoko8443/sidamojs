@@ -1,12 +1,9 @@
 import { BaseElement } from '../BaseElement';
 export declare class UserCard extends BaseElement {
+    image: string;
+    name: string;
+    email: string;
     constructor(_template: string, _style: string);
-    get image(): any;
-    set image(val: any);
-    get name(): any;
-    set name(val: any);
-    get email(): any;
-    set email(val: any);
     static get observedAttributes(): string[];
     connectedCallback(): void;
     disconnectedCallback(): void;
