@@ -4,6 +4,7 @@ import template from  "!!raw-loader!../../templates/demo/MyUserCard.html";
 export class MyUserCard extends UserCard{
     constructor(){
         super(template,css);
+        //super(null,null);
     }
 
     get address(){
@@ -21,9 +22,6 @@ export class MyUserCard extends UserCard{
     }
     attributeChangedCallback(name:string, oldValue:any, newValue:any){ // 当 custom element增加、删除、修改自身属性时，被调用
         console.log('attributeChangedCallback','called');
-        console.log('name',name);
-        console.log('oldValue',oldValue);
-        console.log('newValue',newValue);
         if(name === "image"){
             this.shadowRoot.querySelector('img').setAttribute('src', newValue);    
         }

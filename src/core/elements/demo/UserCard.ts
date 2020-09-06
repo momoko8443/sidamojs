@@ -51,20 +51,20 @@ export class UserCard extends BaseElement{
     adoptedCallback(){ //当 custom element被移动到新的文档时，被调用
         console.log('adoptedCallback','called');
     }
-    attributeChangedCallback(name:string, oldValue:any, newValue:any){ // 当 custom element增加、删除、修改自身属性时，被调用
-        console.log('attributeChangedCallback','called');
-        console.log('name',name);
-        console.log('oldValue',oldValue);
-        console.log('newValue',newValue);
-        if(name === "image"){
-            this.shadowRoot.querySelector('img').setAttribute('src', newValue);    
-        }
-        if(name === "name"){
-            (this.shadowRoot.querySelector('.container>.name') as HTMLElement).innerText = newValue;
-        }
-        if(name === "email"){
-            (this.shadowRoot.querySelector('.container>.email') as HTMLElement).innerText = newValue;
-        }
+    
+    imageHandler(oldValue:any, newValue:any){
+        this.shadowRoot.querySelector('img').setAttribute('src', newValue);   
+    }
+    nameHandler(oldValue:any, newValue:any){
+        if()
+        (this.shadowRoot.querySelector('.container>.name') as HTMLElement).innerText = newValue;
+    }
+    emailHandler(oldValue:any, newValue:any){
+        (this.shadowRoot.querySelector('.container>.email') as HTMLElement).innerText = newValue;
+    }
+
+    render(){
+
     }
 }
 customElements.define("user-card", UserCard);

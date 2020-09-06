@@ -8,22 +8,25 @@ export class BaseElement extends HTMLElement{
         this.styleContent = _styleContent;
         this.shadow = this.attachShadow({mode: 'open'});
         if(this.template){
-            this.defineTemplate(this.template);
+            const templateEle:HTMLTemplateElement = document.createElement('template');
+            templateEle.innerHTML = this.template;
+            this.shadow.appendChild(templateEle.content);
         }      
         if(this.styleContent){
-            this.defineStyle(this.styleContent);
+            const styleLink:HTMLStyleElement = document.createElement('style');
+            this.styleContent = this.styleContent.replace(/[\r\n]/g,"");
+            styleLink.innerText = this.styleContent;
+            this.shadow.appendChild(styleLink);
         }
     }
-    defineTemplate(template:string){
-        const templateEle:HTMLTemplateElement = document.createElement('template');
-        templateEle.innerHTML = template;
-        this.shadow.appendChild(templateEle.content);
+    attributeChangedCallback(name:string, oldValue:any, newValue:any){
+        if((this as any)[name + 'Handler'] && typeof (this as any)[name + 'Handler'] === 'function'){
+            (this as any)[name + 'Handler'].call(this,oldValue,newValue);
+        }
     }
-    defineStyle(styleContent:string){
-        const styleLink:HTMLStyleElement = document.createElement('style');
-        styleContent = styleContent.replace(/[\r\n]/g,"");
-        styleLink.innerText = styleContent;
-        this.shadow.appendChild(styleLink);
+
+    render(){
+        
     }
 }
 
