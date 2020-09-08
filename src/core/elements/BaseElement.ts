@@ -47,7 +47,6 @@ export class BaseElement extends HTMLElement{
             (this as any)[name + 'Handler'].call(this,oldValue,newValue);
         }
     }
-
     render(){
         
     }

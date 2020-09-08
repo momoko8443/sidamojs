@@ -20,7 +20,9 @@ export class UserCard extends BaseElement{
     static get observedAttributes() {
         return ['image', 'name','email'];
     }
-    
+    attributeChangedCallback(name:string, oldValue:any, newValue:any){
+        super.attributeChangedCallback(name, oldValue, newValue);
+    }
     connectedCallback(){ //当 custom element首次被插入文档DOM时，被调用
         console.log('connectedCallback','called');
     }
