@@ -33,6 +33,7 @@
   "author": "",
   "license": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository":"git@github.com:momoko8443/sidamojs.git"
 }
