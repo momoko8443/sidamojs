@@ -31,5 +31,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
