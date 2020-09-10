@@ -61,7 +61,8 @@
     const navDOM = document.getElementById('navigatorArrow');
     navDOM.source = navItems;
     navDOM.addEventListener('itemclick', (e) => {
-        alert(e.detail.title);
+        //alert(e.detail.title);
+        console.log(e.detail.title);
     })
     //navDOM.setAttribute('source',JSON.stringify(navItems));
     //navDOM.setAttribute('source',navItems);

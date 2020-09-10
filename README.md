@@ -2,13 +2,60 @@
 
 Sidamo is a collection of pure webcomponents
 
-## Installation
+## Demo
+https://momoko8443.github.io/sidamojs/dist/
 
-TODO: Describe the installation process
+## Installation
+```
+npm install @momoko8443/sidamojs@0.0.1
+"@momoko8443/sidamojs": "0.0.1"
+```
 
 ## Usage
-
-TODO: Write usage instructions
+```
+...
+<script src="https://momoko8443.github.io/sidamojs/dist/sidamo.js"></script>
+...
+<body>
+    ...
+    <serai-navigator-arrow id="navigatorArrow"></serai-navigator-arrow>
+    ...
+</body>
+...
+<script>
+    const navItems = [
+        {
+            title: 'aaaaaaaaaa'
+        }, 
+        {
+            title: 'bbbbb'
+        }, 
+        {
+            title: 'ccccccc'
+        },
+        {
+            title: 'dddddddddddd'
+        },
+        {
+            title: 'eeeeeeeeee'
+        },
+        {
+            title: 'ffffffff'
+        },
+        {
+            title: 'ggg'
+        },
+        {
+            title: 'hhhhhh'
+        }];
+    const navDOM = document.getElementById('navigatorArrow');
+    navDOM.source = navItems;
+    navDOM.addEventListener('itemclick', (e) => {
+        //alert(e.detail.title);
+        console.log(e.detail.title);
+    })
+</script>
+```
 
 ## Contributing
 
@@ -24,7 +71,7 @@ v0.0.1: new components: navigator bar
 
 ## Credits
 
-TODO: Write credits
+Owner: Huibin Zheng (momoko8443)
 
 ## License
 MIT
