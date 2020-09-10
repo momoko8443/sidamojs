@@ -1,5 +1,5 @@
 {
-  "name": "sidamojs",
+  "name": "@momoko8443/sidamojs",
   "version": "0.0.1",
   "description": "",
   "main": "dist/sidamo",
@@ -33,7 +33,10 @@
   "author": "",
   "license": "",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/momoko8443"
   },
-  "repository":"git@github.com:momoko8443/sidamojs.git"
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/momoko8443/sidamojs.git"
+  }
 }
