@@ -1,0 +1,60 @@
+
+.pf-ProfileAnchor-container {
+    display: flex;
+    border-bottom: 1px solid #ebebeb;
+    padding: 0 12px 0px 12px;
+    background: #f3f3f5;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+}
+.sr-anchor-scrollContainer {
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.sr-anchor-scrollContainer_wrapper {
+    padding: 0;
+}
+.scroll {
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.leftArrow {
+    width: 11px;
+    height: 19px;
+}
+.rightArrow {
+    width: 11px;
+    height: 19px;
+}
+.arrowButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    top: 0;
+    width: 60px;
+    height: 43px;
+    cursor: pointer;
+}
+.r {
+    right: 0;
+    background: linear-gradient(
+        270deg,
+        #f3f3f5 62.61%,
+        rgba(243, 243, 245, 0) 118.92%
+    );
+}
+.l {
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        #f3f3f5 62.61%,
+        rgba(243, 243, 245, 0) 118.92%
+    );
+}

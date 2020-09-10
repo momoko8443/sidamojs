@@ -8,11 +8,15 @@ import {LoginForm} from "./core/elements/form/loginForm";
 import {News} from "./core/elements/list/News";
 import {UserCard} from "./core/elements/demo/UserCard";
 import {MyUserCard} from "./core/elements/demo/MyUserCard";
+import {Navigator} from "./core/elements/navigator/Navigator";
+import {NavigatorArrow} from "./core/elements/navigator/NavigatorArrow";
 export let sidamo = {
     VBox,
     HBox,
     LoginForm,
     News,
     UserCard,
-    MyUserCard
+    MyUserCard,
+    Navigator,
+    NavigatorArrow
 }

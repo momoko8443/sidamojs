@@ -1,3 +1,4 @@
+import {isJson} from '../../util/common';
 export class BaseElement extends HTMLElement{
     shadow:ShadowRoot;
     template:string;
@@ -44,6 +45,12 @@ export class BaseElement extends HTMLElement{
     }
     attributeChangedCallback(name:string, oldValue:any, newValue:any){
         if((this as any)[name + 'Handler'] && typeof (this as any)[name + 'Handler'] === 'function'){
+            if(isJson(oldValue)){
+                oldValue = JSON.parse(oldValue);
+            }
+            if(isJson(newValue)){
+                newValue = JSON.parse(newValue);
+            }
             (this as any)[name + 'Handler'].call(this,oldValue,newValue);
         }
     }

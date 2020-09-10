@@ -5,6 +5,7 @@ export declare class UserCard extends BaseElement {
     email: string;
     constructor(_template: string, _style: string);
     static get observedAttributes(): string[];
+    attributeChangedCallback(name: string, oldValue: any, newValue: any): void;
     connectedCallback(): void;
     disconnectedCallback(): void;
     adoptedCallback(): void;

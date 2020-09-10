@@ -1,0 +1,35 @@
+.greyBottomLine{
+    border-bottom: solid 1px #cdcdcd;
+}
+.anchorsBox{
+    display: flex;
+    position: relative;
+}
+
+.active{
+    height: 3px;
+    position: absolute;
+    bottom: 0;
+    border-bottom: solid 3px #066184;
+    transition: left 0.3s ease-out,width 0.3s ease-out;
+}
+
+.sr-anchorBtn{ 
+    padding-top:12px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 12px;
+    font-family: HeroNew;
+    font-size: 16px;
+    color: #231f20;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.sr-anchorBtn:hover{
+    font-family: HeroNew-Semibold;
+}
+
+.sr-anchorBtn_active{
+    color:#066184;
+    font-family: HeroNew-Semibold;
+}

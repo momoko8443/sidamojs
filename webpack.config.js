@@ -6,6 +6,14 @@ module.exports = {
   mode: 'development',
   module: {
     rules: [
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)$/i,
+      //   loader: 'file-loader',
+      //   options: {
+      //     // publicPath: 'assets',
+      //     outputPath: 'images'
+      //   },
+      // },
       {
         test: /\.css$/i,
         use: [
