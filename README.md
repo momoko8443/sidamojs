@@ -20,7 +20,7 @@ TODO: Write usage instructions
 
 ## History
 
-v0.1: new components: navigator bar
+v0.0.1: new components: navigator bar
 
 ## Credits
 
