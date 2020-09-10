@@ -7,7 +7,6 @@ export declare class Navigator extends BaseElement {
     connectedCallback(): void;
     disconnectedCallback(): void;
     adoptedCallback(): void;
-    customtitleHandler(oldVal: any, newVal: any): void;
     sourceHandler(oldVal: any, newVal: any): void;
     renderList(list: Array<any>): void;
     switchTab(index: number): void;

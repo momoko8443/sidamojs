@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./sidamo.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <!-- <h1>hello world</h1> -->
     <!-- <serai-news id="seraiNews" title="DEMO"></serai-news> -->
@@ -31,10 +33,34 @@
     //     //console.log(e.detail);
     //     alert(e.detail.title);
     // })
-    const navItems = [{title:'aaa'},{title:'bbb'},{title:'ccc'}];
+    const navItems = [
+        {
+            title: 'aaaaaaaaaa'
+        }, 
+        {
+            title: 'bbbbb'
+        }, 
+        {
+            title: 'ccccccc'
+        },
+        {
+            title: 'dddddddddddd'
+        },
+        {
+            title: 'eeeeeeeeee'
+        },
+        {
+            title: 'ffffffff'
+        },
+        {
+            title: 'ggg'
+        },
+        {
+            title: 'hhhhhh'
+        }];
     const navDOM = document.getElementById('navigatorArrow');
     navDOM.source = navItems;
-    navDOM.addEventListener('itemclick',(e)=>{
+    navDOM.addEventListener('itemclick', (e) => {
         alert(e.detail.title);
     })
     //navDOM.setAttribute('source',JSON.stringify(navItems));
@@ -45,4 +71,5 @@
     //     alert(e.detail.title);
     // })
 </script>
+
 </html>
