@@ -7,8 +7,7 @@ https://momoko8443.github.io/sidamojs/dist/
 
 ## Installation
 ```
-npm install @momoko8443/sidamojs@0.0.1
-"@momoko8443/sidamojs": "0.0.1"
+npm install sidamojs@0.0.1
 ```
 
 ## Usage
