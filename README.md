@@ -11,6 +11,14 @@ elements list:
 online demo:
 https://momoko8443.github.io/sidamojs/dist/
 
+## Development ENV Setup
+
+```
+npm install
+
+npm run serve
+```
+
 ## Installation
 ```
 npm install sidamojs
