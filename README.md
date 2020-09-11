@@ -1,13 +1,18 @@
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/sidamojs)
 # Sidamo
-
 Sidamo is a collection of pure webcomponents
 
+elements list:
+1: Navigator bar
+2: coming soon
+
 ## Demo
+online demo:
 https://momoko8443.github.io/sidamojs/dist/
 
 ## Installation
 ```
-npm install sidamojs@0.0.1
+npm install sidamojs
 ```
 
 ## Usage
