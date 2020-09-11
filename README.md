@@ -3,8 +3,9 @@
 Sidamo is a collection of pure webcomponents
 
 elements list:
-1: Navigator bar
-2: coming soon
+1. pure navigator bar
+2. navigator bar with arrow
+3. coming soon
 
 ## Demo
 online demo:
