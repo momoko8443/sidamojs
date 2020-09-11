@@ -47,9 +47,7 @@ export class NavigatorArrow extends BaseElement{
         window.addEventListener('resize',()=>{
             this.renderArrow();
         })
-        setTimeout(() => {
-            this.renderArrow();
-        }, 1000);
+        
     }
     disconnectedCallback(){ //当 custom element从文档DOM中删除时，被调用
         console.log('disconnectedCallback','called');
@@ -60,6 +58,9 @@ export class NavigatorArrow extends BaseElement{
     sourceHandler(oldVal:any,newVal:any){
         console.log(newVal);
         (this.navigator as any).source = newVal;
+        setTimeout(() => {
+            this.renderArrow();
+        }, 1000);
     }
     renderArrow() {
         const viewW = this.wrapper.clientWidth;
